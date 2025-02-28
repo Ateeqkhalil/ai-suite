@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Writer</title>
+  <meta name="description" content="Create professional emails instantly.">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS (for Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loading.min.css">
+</head>
+
+<body>
+
+<div class="back-button-container">
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Tools
+        </a>
+    </div>
+</div>
+
+
+<!-- AI Generator Section -->
+<div class="blog-generator-section">
+  <div class="container">
+      <h2><i class="fas fa-envelope text-purple me-2"></i> Email Writer</h2>
+      <p>Create professional emails instantly.</p>
+      <div class="blog-generator-container">
+          <!-- Input Section -->
+          <div class="blog-input-card">
+              <form id="ai_generator_form">
+
+                  <input name="tool_name" type="hidden" value="email_writer" />
+                  
+                  <label for="Purpose">Email Purpose</label>
+                  <textarea id="purpose" name="purpose" placeholder="What's the purpose of your email?" required></textarea>
+
+                  <label for="Recipient">Recipient</label>
+                  <textarea id="recipient" name="recipient" placeholder="Who are you writing to?" required></textarea>
+
+                  <label for="Tone">Writing Tone</label>
+                  <select id="tone" name="tone">
+                      <option value="">Choose Tone Style</option>
+                      <option value="Formal">Formal</option>
+                      <option value="Friendly">Friendly</option>
+                      <option value="Persuasive">Persuasive</option>
+                      <option value="Concise & Direct">Concise & Direct</option>
+                      <option value="Apologetic">Apologetic</option>
+                      <option value="Appreciative">Appreciative</option>
+                      <option value="Encouraging">Encouraging</option>                            
+                  </select>
+                  
+                  <button class="generate-button" id="generate_button"><span class="ld ld-hourglass ld-spin-fast ld-font-size d-none" id="btn_ld_spin"></span> Generate Email</button>
+
+                  <div id="generate_error" class="text-danger fw-600 mt-2"></div>
+
+              </form>
+          </div>
+
+          <!-- Output Section -->
+          <div class="blog-output-card">
+              <div class="d-flex justify-content-between mb-2">
+                  <div>
+                      <h5>Generated Email</h5>
+                  </div>
+                  <div>
+                      <a class="copy-btn" id="copyOutPut" title="Copy Content"><i class="fas fa-copy me-2"></i></a>
+                      <a class="copy-btn" id="downloadOutput" title="Download File"><i class="fas fa-download me-2"></i></a>
+                  </div>
+              </div>
+              <div class="blog-generator-output" id="ai_output">
+                  <p>Your AI generated ideas will appear here...</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+      <p>© 2025 AI Toolkit. All rights reserved.</p>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+
+  <div class="floating-button-container">
+    <a href="#" class="floating-button">
+      Design by Ateeq Khalil
+    </a>
+  </div>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
